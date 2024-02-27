@@ -72,11 +72,11 @@ further sub-isolations applied.
 
 A Pod is similar to a set of containers with shared namespaces and shared filesystem volumes.
 -->
-Pod 的共享上下文包括一组 Linux 名字空间、控制组（cgroup）和可能一些其他的隔离方面，
+Pod 的共享上下文包括一组 Linux 命名空间、控制组（cgroup）和可能一些其他的隔离方面，
 即用来隔离{{< glossary_tooltip text="容器" term_id="container" >}}的技术。
 在 Pod 的上下文中，每个独立的应用可能会进一步实施隔离。
 
-Pod 类似于共享名字空间并共享文件系统卷的一组容器。
+Pod 类似于共享命名空间并共享文件系统卷的一组容器。
 
 <!--
 ## Using Pods
@@ -521,7 +521,7 @@ they must coordinate how they use the shared network resources (such as ports).
 ### Pod 联网    {#pod-networking}
 
 每个 Pod 都在每个地址族中获得一个唯一的 IP 地址。
-Pod 中的每个容器共享网络名字空间，包括 IP 地址和网络端口。
+Pod 中的每个容器共享网络命名空间，包括 IP 地址和网络端口。
 **Pod 内**的容器可以使用 `localhost` 互相通信。
 当 Pod 中的容器与 **Pod 之外**的实体通信时，它们必须协调如何使用共享的网络资源（例如端口）。
 
