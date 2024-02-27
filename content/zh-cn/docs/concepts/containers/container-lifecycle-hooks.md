@@ -209,7 +209,7 @@ Here is some example output of the resulting events you see from running `kubect
 ### 调试回调处理程序
 
 回调处理程序的日志不会在 Pod 事件中公开。
-如果处理程序由于某种原因失败，它将播放一个事件。
+如果处理程序由于某种原因失败，它将广播一个事件。
 对于 `PostStart`，这是 `FailedPostStartHook` 事件，对于 `PreStop`，这是 `FailedPreStopHook` 事件。
 要自己生成失败的 `FailedPostStartHook` 事件，请修改
 [lifecycle-events.yaml](https://raw.githubusercontent.com/kubernetes/website/main/content/en/examples/pods/lifecycle-events.yaml)
